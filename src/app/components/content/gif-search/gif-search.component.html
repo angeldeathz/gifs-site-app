@@ -4,8 +4,8 @@
 
     <mat-form-field id="search-input">
       <mat-label>Search GIF</mat-label>
-      <input matInput type="text" [(ngModel)]="value">
-      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <input matInput type="text" [(ngModel)]="filtro" (keydown.enter)="buscarGif()">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="filtro=''">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>

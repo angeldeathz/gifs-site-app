@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { GifService } from '../../../shared/services/gif-service.service';
 
 @Component({
   selector: 'app-historial',
   templateUrl: './historial.component.html',
   styleUrls: ['./historial.component.scss']
 })
-export class HistorialComponent implements OnInit {
+export class HistorialComponent {
 
-  constructor() { }
+  constructor(private gifService: GifService) { }
 
-  ngOnInit() {
+  get historial() {
+    console.log(this.gifService.getHistorial());
+    return this.gifService.getHistorial();
   }
 
 }

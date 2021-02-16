@@ -4,6 +4,7 @@ import { HistorialComponent } from './historial/historial.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from '../../shared/modules/material.module';
 import { ContentModule } from '../content/content.module';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
     declarations: [
@@ -12,6 +13,7 @@ import { ContentModule } from '../content/content.module';
         SidenavComponent
     ],
     imports: [
+        CommonModule,
         MaterialModule,
         ContentModule
     ],

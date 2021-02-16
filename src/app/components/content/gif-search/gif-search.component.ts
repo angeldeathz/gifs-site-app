@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { GifService } from '../../../shared/services/gif-service.service';
 
 @Component({
   selector: 'app-gif-search',
   templateUrl: './gif-search.component.html',
   styleUrls: ['./gif-search.component.scss']
 })
-export class GifSearchComponent implements OnInit {
+export class GifSearchComponent {
 
-  public value = "";
+  public filtro = "";
   
-  constructor() { }
+  constructor(private gifService: GifService) { }
 
-  ngOnInit() {
+  buscarGif() {
+    if (this.filtro) {
+      this.gifService.addToHistorial(this.filtro);
+      this.filtro = "";
+    }
   }
-
 }

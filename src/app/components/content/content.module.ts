@@ -1,3 +1,4 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MaterialModule } from "src/app/shared/modules/material.module";
@@ -12,7 +13,8 @@ import { GifSearchComponent } from './gif-search/gif-search.component';
     imports: [
         FormsModule,
         MaterialModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        CommonModule
     ],
     exports: [
         GifListComponent,

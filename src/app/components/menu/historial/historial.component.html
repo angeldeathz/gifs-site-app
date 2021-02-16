@@ -1,3 +1,8 @@
 <div id="content">
-
+  <mat-selection-list #querys [multiple]="false">
+    <mat-list-option *ngFor="let query of historial" [value]="query" id="option">
+      {{ query }}
+      <mat-divider></mat-divider>
+    </mat-list-option>
+  </mat-selection-list>
 </div>
