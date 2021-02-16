@@ -2,17 +2,13 @@
   <div id="search">
     <h1>Search a Gif</h1>
 
-    <mat-form-field>
-      <mat-label>Buscar</mat-label>
-      <input matInput type="text">
-      <button mat-button matSuffix mat-icon-button aria-label="Clear">
+    <mat-form-field id="search-input">
+      <mat-label>Search GIF</mat-label>
+      <input matInput type="text" [(ngModel)]="value">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
-  </div>
-
-  <div>
-    
   </div>
 
   <mat-divider></mat-divider>

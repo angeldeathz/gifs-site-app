@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GifSearchComponent implements OnInit {
 
+  public value = "";
+  
   constructor() { }
 
   ngOnInit() {
