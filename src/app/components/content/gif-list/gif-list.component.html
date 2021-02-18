@@ -1,3 +1,9 @@
-<div id="content">
-    sdfsdf
+<div class="row">
+  <div class="column" *ngFor="let image of imagenes" id="item">
+    <img
+      mat-card-image
+      src="{{ image.images.downsized_medium.url }}"
+      alt="{{ image.title }}"
+    />
+  </div>
 </div>

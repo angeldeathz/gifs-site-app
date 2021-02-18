@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { GifService } from '../../../shared/services/gif.service';
+import { Gif } from '../../../shared/interfaces/gif.interface';
 
 @Component({
   selector: 'app-gif-list',
   templateUrl: './gif-list.component.html',
   styleUrls: ['./gif-list.component.scss']
 })
-export class GifListComponent implements OnInit {
+export class GifListComponent {
 
-  constructor() { }
+  constructor(private gifService: GifService) { }
 
-  ngOnInit() {
+  get imagenes(): Gif[] {
+    return this.gifService.getImagenes();
   }
-
 }
