@@ -3,6 +3,15 @@
 }
 
 #option {
-    color: black;
+    color: white;
+}
+
+#option:hover {
+    color: gray;
+}
+
+#btnLimpiarHistorial {
     background-color: white;
+    color: black;
+    margin-right: 5%;
 }

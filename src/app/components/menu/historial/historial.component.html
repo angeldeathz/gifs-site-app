@@ -1,8 +1,12 @@
 <div id="content">
+
   <mat-selection-list #querys [multiple]="false">
-    <mat-list-option *ngFor="let query of historial" [value]="query" id="option">
+    <mat-list-option *ngFor="let query of historial" [value]="query" id="option" (click)="buscarGif(query)">
       {{ query }}
-      <mat-divider></mat-divider>
     </mat-list-option>
   </mat-selection-list>
+
+  <button mat-stroked-button id="btnLimpiarHistorial" *ngIf="historial" (click)="limpiarHistorial()">
+    Clear History
+  </button>
 </div>

@@ -31,6 +31,10 @@ export class GifService {
     return JSON.parse(historial);
   }
 
+  public clearHistorial() {
+    localStorage.setItem("historial_busqueda", null);
+  }
+
   public setImagenes(imagenes: Gif[]) {
     localStorage.setItem("imagenes", JSON.stringify(imagenes));
   }
