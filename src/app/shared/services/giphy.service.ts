@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import {environment} from '../../../environments/environment';
 import { Injectable } from '@angular/core';
@@ -13,7 +13,13 @@ export class GiphyService {
   constructor(private restClient: RestClientService) { }
 
   public async get(query: string) {
-    const url = "https://api.giphy.com/v1/gifs/search?api_key="+ environment.apiKeyGif +"&q=" + query + "&limit=25";
-    return (await this.restClient.get<GifInterface>(url)).toPromise();
+    const url =  environment.urlGiphyApi + "search";
+
+    const params = new HttpParams()
+      .set("api_key", environment.apiKeyGif)
+      .set("q", query)
+      .set("limit", "25");
+
+    return (await this.restClient.get<GifInterface>(url, params)).toPromise();
   }
 }

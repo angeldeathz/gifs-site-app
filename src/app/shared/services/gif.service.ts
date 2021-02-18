@@ -39,7 +39,7 @@ export class GifService {
     localStorage.setItem("imagenes", JSON.stringify(imagenes));
   }
 
-  public getImagenes() {
+  public getImagenes(): Gif[] {
     const imagenes = localStorage.getItem("imagenes");
     return JSON.parse(imagenes);
   }
