@@ -18,7 +18,7 @@ export class GiphyService {
     const params = new HttpParams()
       .set("api_key", environment.apiKeyGif)
       .set("q", query)
-      .set("limit", "25");
+      .set("limit", "50");
 
     return (await this.restClient.get<GifInterface>(url, params)).toPromise();
   }

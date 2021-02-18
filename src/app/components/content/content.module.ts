@@ -1,3 +1,4 @@
+import { ScrollingModule } from "@angular/cdk/scrolling";
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -14,7 +15,8 @@ import { GifSearchComponent } from './gif-search/gif-search.component';
         FormsModule,
         MaterialModule,
         ReactiveFormsModule,
-        CommonModule
+        CommonModule,
+        ScrollingModule
     ],
     exports: [
         GifListComponent,
